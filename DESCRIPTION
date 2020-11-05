@@ -16,3 +16,9 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+import:
+  usethis,
+  tools,
+  haven,
+  readxl,
+  vroom
