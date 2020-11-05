@@ -11,7 +11,8 @@ The purpose of this package is help set up a project directory with subdirectori
 
 ## Install dsproject package
 The following code will let you download the package
-```{r, eval= FALSE}
+
+```{r}
 if (!require(devtools)){
   install.packages("devtools")
  }
