@@ -1,4 +1,4 @@
-#' @Title Make Project
+#' @title Make Project
 #' @description
 #' \code{make_project} creates a project directory and subdiretories
 #'

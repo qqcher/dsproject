@@ -9,8 +9,10 @@ The purpose of this package is help set up a project directory with subdirectori
 
 !["an example of a project created using dsproject"](example.png)
 
-## Download
-This package can be installed by using `install.pacakge("dsproject")` and called using `library(dsproject)`.
+## Install dsproject package
+The following code will let you download the package
+
+![ ](install.png)
 
 ## Lience: MIT
 
