@@ -1,0 +1,18 @@
+Package: dsproject
+Title: Package Creation with Nescessary Sub-directories
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Cher",
+           family = "Qin",
+           role = c("aut", "cre"),
+           email = "qqin@wesleyan.edu")
+Description: This package allows users to create a package and sub-directories such as "figures", "documentation", "data", "reports", "R" along with a Readme file.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

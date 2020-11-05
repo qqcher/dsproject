@@ -1,0 +1,62 @@
+---
+title: "dsproject"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{dsproject}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+## A brief guide of package dsproject
+#### Summary
+`dsproject` allows the user to create a project directory with several subdirectories. The goal of this documentation is to help users to know more of the package, so they can begin making their project as soon as possible.
+
+#### dsproject basics
+First, call `dsproject` using `library()`
+```{r setup}
+library(dsproject)
+```
+To make the project directory, use `make_project()`. you will need to input the name of the project, path, and subdirectories. A README.md will be created automatically and the default for git is FALSE. The default path is the current working directories. You can customize the path by specifying the path as a character stringThe default folders are "figures", "documentation", "data", "reports", and "R". You can customize the names of subdirectories as well. 
+
+##### default 
+This is an example of the function `make_project()` with its default arguments.
+```{r, eval=FALSE}
+make_project("example", path = getwd(), folders = c("figures",
+                                                   "documentation",
+                                                   "data", 
+                                                   "reports", 
+                                                   "R"),
+             readme = "README.md",
+             git = FALSE)
+```
+
+##### possible alteration
+This an example of the possible customization made to `make_project()`
+```{r, eval=FALSE}
+make_project("example", path = "~/Desktop", folders = c("pictures",
+                                                   "docs",
+                                                   "data", 
+                                                   "report", 
+                                                   "R"),
+             readme = "README.md",
+             git = TRUE)
+```
+
+You can also import data to your project/package by using the function `import()`. `import()` will take given file and read as a dataframe or a matrix depending on the extension of the file. 
+
+```{r, eval = FALSE}
+df <- import("example.cvs")
+```
+The example here is a cvs file. However, `import()` can take various form of files from excel to spss. Look in the help page for the specifics.
+
+Add-on packages can also to attached to your project. The function do so is `use()`. `use()` will load the namespace of the package and attach it to the search list. If the package is not install, it will prompt a dialogue for user to confirm the installation. `use()` can take the name of the package in a character string or unenquoted name formate.
+```{r,eval = FALSE}
+use("usethis")
+use(usethis)
+```
